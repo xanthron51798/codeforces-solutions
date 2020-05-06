@@ -1,0 +1,19 @@
+n=int(input())
+st=str(input())
+i=0
+s=['0','0','0','0','0','0','0','0','0','0']
+for i in range(len(st)):
+    if(st[i]=='L'):
+        for j in range(len(s)):
+            if(s[j]=='0'):
+                s[j]='1'
+                break
+    elif(st[i]=='R'):
+        for l in reversed(range(len(s))):
+            if(s[l]=='0'):
+                s[l]='1'
+                break
+    else:
+        s[int(st[i])]='0'
+
+print(''.join(map(str,s)))
